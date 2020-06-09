@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+
+<html lang="en">
+	<head>
+	<meta charset="utf-8"/>
+    <title>Task 06 - Divisible Numbers</title>
+    
+    <script>
+	maxN =  parseInt (prompt("What is your max number?"));
+	divide = parseInt (prompt("What number do you want to divide by?"));
+	
+	while (maxN < divide) {
+		alert("The number you wanted to divide by is larger than your maximum number. Please enter your values again.");
+		maxN =  parseInt (prompt("What is your max number?"));
+		divide = parseInt (prompt("What number do you want to divide by?"));
+	}
+	
+	
+	var counter = 0;
+	
+	document.write("<h1>Max number: " + maxN + "</h1>");
+	document.write("<h2>Divisor: " + divide + "</h2>");
+	
+		
+	for(var i = 1; i <= maxN; i++) {
+		var mod = i % divide;
+		var answer = i/divide;
+		
+		if (mod == 0) {
+			
+		document.write("<p>" + i + "/" + divide + " = " + answer + "</p>");
+		counter++;
+		}
+	}
+	document.write("<h3>There are " + counter + " possible ways your max number can be factored by your divisor</h3>")
+	</script>
+	
+	</head>
+<body>
+</body>
+</html>

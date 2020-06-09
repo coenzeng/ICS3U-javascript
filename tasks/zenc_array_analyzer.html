@@ -1,0 +1,68 @@
+<!doctype html>
+
+<html lang ="en">
+
+<head>
+	<meta charset="utf-8"/>
+    <title>Array Analyzer</title>
+    
+    <script>
+
+	var numbers = [];
+	var badnumbers = [];
+	var notnumbers = [];
+	var answer = [];
+		var n = 1;
+		for(var i = 0; i < 10; i++) {
+			var value = prompt("Pick a number from 1-10.");
+			if(isNaN(value)){
+				alert("You did not enter a number.");
+				i--;
+				notnumbers.push(value);
+			} else if (value >= 1 && value <= 10) {
+				numbers.push(value);
+			} else {
+				alert("You did not enter a number between 1-10.");
+				i--;	
+				badnumbers.push(value); 
+			}  
+		
+		}
+	
+	if (notnumbers == 0) {
+	notnumbers = "None!";
+	}
+	if (badnumbers == 0) {
+	badnumbers = "None!";
+	}
+
+for (var i = 0; i < numbers.length; i++) {
+  var num = numbers[i];
+	
+  answer[num] = (answer[num] || 0) + 1; //checks all 10 numbers one by one using the for statement. If it is a certain number, it will be added on (+1) and each number has it's own counter
+}
+
+		document.write("Your array is: " + numbers);
+		document.write("<br> The input(s) that you entered that are not numbers: " + notnumbers);
+		document.write("<br> The number(s) that you entered that are not between 1 and 10: " + badnumbers);
+		
+		document.write("<table border = '1'>");
+		document.write("<tr> <th colspan='2'>Array Analyzer</th> </tr>");
+		document.write("<tr> <th>Input Value</th> <th>Number of Occurrences</th> </tr>");
+			
+			for(var j = 1; j <= 10; j++) {
+				
+				if (answer[n] == undefined){
+						answer[n] = 0; //if the value is not in the array then the answer will be zero
+					}
+				
+					document.write("<tr> <td>" + j + "</td> <td>" + answer[n] + "</td> </tr>"); 
+					n++;
+				
+	}
+
+	document.write("</table>");
+	</script>
+<body>
+</body>
+</html>

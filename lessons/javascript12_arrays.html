@@ -1,0 +1,40 @@
+<!doctype html>
+
+<html lang="en">
+
+<head>
+	<meta charset="utf-8"/>
+    <title>Javascript 12 - Arrays</title>
+    
+    <script>
+	/* An array is an unique data type. It is a single varaible that can hold multiple bits of information*/
+	
+	var fruit = ["apples", "oranges", "strawberries", "mangos"];
+	/*Square brakets tell Javascrput we are creating an array*/
+	
+	/*when we alert an array variable. it will show ALL the content within the array*/
+	alert(fruit);
+	
+	/* If we want to display a specific value within an array,. we have to target its position. */
+	/* Positions in an array START AT ZERO */
+	
+	alert(fruit[0]); //apples
+	alert(fruit[1]); //oranges
+	alert(fruit[2]); //strawberries
+	alert(fruit[3]); //mangos
+	
+	
+	/* .lemgth allows us to know how many values are contained within an array */
+	alert(fruit.length); //4 bc there are 4 items.
+	
+	for (var x = 0; x < fruit.length; x++) {
+		alert("I have some " + fruit[x]);
+		
+	}
+	</script>
+    
+    </head>
+    
+    <body>
+    </body>
+    </html>

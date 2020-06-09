@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+	<meta charset="utf-8"/>
+	<title>Task 04 - Three Ifs with Counter</title>
+    
+    <script>
+	
+	var name = prompt("Please enter your full name.");
+	var weapon =prompt("Please enter in a weapon.")
+	var counter = 0;
+		
+	var input = prompt ("While running away from " + name + ", you spot a rock in your path. Do you pick it up to throw it at " + name + "? (y/n)");
+	if (input =="y") {
+		alert("What an effective hit, it landed right on " + name + "'s face!");
+
+	} else if (input == "n"){ 
+		counter = counter + 1;
+	}
+
+		
+	var input = prompt ("Next up is a very narrow cave. Do you choose to squish past the cave instead of running through open ground? (y/n)");
+	if (input =="y") {
+		alert("The cave was tight to get through, but you made it through nonetheless, albeit with a few scratches.");
+
+	} else if (input == "n") {
+		counter = counter + 1;
+	}
+		
+		
+		var input = prompt (name + " is a fair bit behind you now but still determined to catch you. Up ahead you spot a floating " + weapon + ". It looks suspicious. Do you pick it up and use it? (y/n)");
+	if (input =="y") {
+		alert("You load the " + weapon + " onto your arms and aim it right at " + name + ". " + name + " is disabled and is blinded temporarily.");
+
+	} else if (input == "n") {
+		counter = counter + 1;
+	}						
+		
+		
+	var input = prompt ("Taken aback, " + name + " stumbles but regains footing and is hot on your trail again, this time even more angry. You approach a cliff. Do you make the leap of faith and jump? (y/n)");
+	if (input =="y") {
+		alert("The landing hurt you a bit but " + name + " refuses to follow you off the cliff. You have successfully escaped the clutches of " + name + "!");
+
+	} else if (input == "n") {
+		counter = counter + 1;
+	}													   
+		
+														   													   
+	alert("You entered no " + counter + " time(s).");
+	</script>
+    
+</head>
+
+<body>
+</body>
+
+</html>
+

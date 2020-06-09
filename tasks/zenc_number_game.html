@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+	<meta charset="UTF-8"/>
+    <title>Task 11 - Number Game</title>
+
+	<script>
+		
+	randomNum();
+	
+	function randomNum() {
+		
+		var level = prompt("Explore the floors without stumbling upon the bomb!What level would you like to play at? (easy/medium/hard)");
+		
+		if (level == "easy") {
+			var minNum = 1;
+			var maxNum = 20;	
+		} else if (level == "medium") {
+			var minNum = 1;
+			var maxNum = 30;
+		} else if (level == "hard") {
+			var minNum = 1;
+			var maxNum = 50;
+		} else {
+			alert("You did not enter in a valid level.");
+		}
+		
+		var input = [];
+		var score = 0;
+		var randomNumbers = [];
+		var number2 = number1;
+
+		while(number1 == number2 || number2 == number3 || number1 == number3) {
+		
+			var number1 = Math.floor(Math.random() * (maxNum - minNum + 1)) + minNum;
+			var number2 = Math.floor(Math.random() * (maxNum - minNum + 1)) + minNum;
+			var number3 = Math.floor(Math.random() * (maxNum - minNum + 1)) + minNum;	
+		}
+		
+		randomNumbers.push(number1);
+		randomNumbers.push(number2);
+		randomNumbers.push(number3);
+		alert(randomNumbers);
+		
+		game();
+		
+		
+		
+		function game() {
+			
+			while(score < maxNum - 3) {
+				
+				var guess = prompt("Choose a floor number from " + minNum + "-" + maxNum + ".");
+				
+				if(isNaN(guess)){
+					
+					alert("You did not enter a number.");
+					game();	
+						
+				} else if(guess >= 1 && guess <= maxNum){
+					
+					input.push(guess);
+						
+				} else {
+					
+					alert("You did not enter a number between 1-" + MaxNum + ".");	
+					game();	
+				
+				}
+				
+				var x = 0;
+			
+				while(x < input.length - 1) {
+									
+					if(guess == input[x]){
+						alert("You have already visited that floor.");
+						game();
+					}
+					
+					x++;
+				}
+				
+					if(guess == randomNumbers[0]) {
+						
+						alert("You stumbled upon the bomb and tragically died! Score: " + score);
+						playAgain();
+					 
+							} else if (guess == randomNumbers[1] && number2 > randomNumbers[0]) {
+								alert("The bomb is somewhere below you!");
+						
+							} else if (guess == randomNumbers[1] && randomNumbers[1] < randomNumbers[0]){
+								alert("The bomb is somewhere above you!");
+						
+							} else if (guess == randomNumbers[2] && randomNumbers[2] > randomNumbers[0]){
+								alert("The bomb is somewhere below you!");
+						
+							} else if (guess == randomNumbers[2] && randomNumbers[2] < randomNumbers[0]){
+								alert("The bomb is somewhere above you!");
+							} else {
+								
+									var response = Math.floor(Math.random() * (3)) + 1;
+
+									if (response == "1") {
+										alert("You see a dusty tresure chest resting in the corner of the room. Opening it reveals some old chainmail. Score: " + score);
+
+									} else if (response == "2") {
+										alert("Nothing here in particular, except a shiny coin on the ground. Score: " + score);
+
+									} else if (response == "3") {
+										alert("You trip on a twig stuck in the ground, but other than that, no risk seems to be posed here. Score: " + score);
+
+									}
+
+							}
+						
+				 
+  				input.sort(function(a, b){return a-b}); //sorts all the guess values in the array, in order from lowest numerical value to highest
+				
+				let unique = [...new Set(input)]; //a new array where all the guess values are unique, so each value only displays once in the array
+				alert("The floors that you have already visited: " + unique);
+					
+			}
+				alert("You discovered all the floors with dying. You win!");
+				playAgain();
+		}
+	}
+		
+		function playAgain() {
+				var play = prompt("Do you like to play again? (y/n)");
+							
+				if(play == "y" ) {
+					randomNum();
+		
+				} else if (play == "n"){
+					alert("Thanks for playing!");
+					fail;
+					
+				} else {
+					alert("You did not enter a valid response.");
+					playAgain();	
+				}
+		}
+	
+	</script>
+
+</head>
+
+</html>

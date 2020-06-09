@@ -1,0 +1,54 @@
+<!doctype html>
+
+<html lang="en">
+
+<head>
+	<meta charset="utf-8"/>
+    <title>Javascript 06 - Types of While Loops</title>
+    
+    <script>
+	
+	var a = 16;
+	while (a >=10) {
+		alert(a);
+		a = a - 1 /*a demonstration of counter that counts down */
+		
+	}
+	/*this loop will continue to long as long a b remains equal to the string "yes" */
+	var b ="yes"
+	while (b == "yes") {
+		b = prompt("Are you still here?");	
+	}
+
+	
+	
+	var e = 0;
+	var f = 10;
+	
+	while (e < f) {
+		
+		e = e + 1;
+		
+		if (e < 5) {/*will only show the following alert when e is less than f*/
+		alert(e + " is less than 5");
+		
+		} else if (e == 5) { /*will only show the following alert when e is equal to 5*/
+		alert(e + " is equal to 5");
+		
+		} else if (e > 5) {/*will only show the following alert when e is greater than 5*/
+		alert(e + " is greater than 5");
+		
+		}
+		
+		
+	}
+	
+		
+	</script>
+    
+</head>
+
+<body>
+</body>
+
+</html>

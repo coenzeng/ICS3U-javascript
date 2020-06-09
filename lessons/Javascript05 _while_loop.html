@@ -1,0 +1,35 @@
+<!doctype html>
+
+<html lang="en">
+
+<head>
+	<meta charset="utf-8"/>
+    <title>Javascript 05 - While loop</title>
+    
+    <script>
+	
+	var counter = 1; /*counter is NOT a type of variable. It is only a concept that demonstrates a variable increasing or decreasing in value. In this example, counter is just a name of a variable. */
+	
+	/*A while loop will continue to loop as long as its condition is TRUE. Once the condition is false, it will immediately end, and continue on with the remaining code. */
+	
+	while (counter < 10) {
+		/*This loop will continue as long as counter is less than 10. Once counter becauses equal to 10, the loop will immediately stop*/
+		
+		alert("counter: " + counter);
+		
+		/*The following is an example of a counter. Each time the loop loops, it adds 1 to the existing value of the counter, and then sets it to the variable counter. If we were to not increase the value of counter, the while loop would always be less than 10, therefore, would never finish. When the condition of a while loop always remains TRUE, it is sometimes referred to as AN INFINITE LOOP (infinite recursion). */
+		counter = counter + 1;
+	}
+	
+	alert("The while loop has completed");
+	
+	</script>
+</head>
+
+<body>
+
+</body>
+
+</html>
+
+

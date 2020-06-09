@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+	<meta charset="utf-8"/>
+	<title>Javascript 04 - Complex If Statements</title>
+    
+    <script>
+	
+	var input = prompt("please enter a number between 1 and 100");
+	var num1 = 0;
+	var num2 = 0;
+	var counter = 0;
+	
+	/* If we need to see if two conditions are both true, we use the && 'and' operator. */
+	if (input >= 1 && input <= 100) {                                                                                                                                                                                      
+		num1 = input;	
+	} else {
+		alert("You entered a invalid number. I've set your first number to 0");
+		counter = counter + 1;
+	}
+	var input = prompt("Please choose the number 2 or 3");
+	
+	/* If we need to see if one of many conditions are possibly true, we use the || 'or' operator */
+	if (input == 2 || input ==3) {
+		num2 = input;
+	} else {
+		alert("You entered an invalid number. I've set your second number to 0");
+		counter = counter +1; 
+	}
+	
+	alert("I multiplied your two numbers together. The result is " + (num1 + num2) + ".");
+	alert("You entered " + counter + " invalid number(s)");
+	
+	</script>
+	
+</head>head>
+
+<body>
+</body>
+
+</html>

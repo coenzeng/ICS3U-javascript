@@ -1,0 +1,40 @@
+<!doctype html>
+
+<html lang="en">
+
+<head>
+	<meta charset="utf-8"/>
+    <title>Javascript - 09 fuctions</title>
+    
+    <script>
+	
+		/*
+		
+		Fuctions area  block of code with a dedicated purpose that only run when they are called upon. fuctions are called/activated based on their name. their name should be meaningful, unique, and MUST NOT use any keywords.
+		
+		*/
+		
+		alert("Ready to use a function? Whoops, you already did!");
+		
+		/*
+		
+		alert() is a function that is pre-built into Javascript. It takes the information betweem the brackers, sends it to the function called 'alert,' which then displays that information in a dialogue box in your web browser. 
+		
+		However, it is impossible for a programming langauage to have every possible function pre-programmed into it, so when we need our code to have new functionality, we build our own function (shown below)
+		
+		*/
+		
+		function start() {
+		
+		alert("function start () activated");
+			/*The following alert will only run when function start() is called as some point in the code*/
+		}
+		
+		function halt() {
+			/*The following alert will not run, because we haven't called it in our code*/
+			alert("function halt() activiated");	
+		}
+		/*in order for a function to run, we simply type it's name to call it*/
+		start();
+		</script>
+</head>

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+	<meta charset="UTF-8"/>
+    <title>Task 11 - Number Guessing Game</title>
+
+	<script>
+	
+	var level = prompt("What difficulty would you like to play at? (easy/hard)");
+	
+	if (level == "easy"){
+		var minNum = 1;
+		var maxNum = 20;
+		easystart();
+	}
+	if (level == "hard"){
+		var minNum = 1;
+		var maxNum = 50;
+	} else {
+		alert("You did not enter in a valid difficultly");
+	}
+	
+
+	function easystart(){
+		
+		
+		var randomNumbers = [];
+		var number2 = number1;
+
+		while(number1 == number2 || number2 == number3 || number1 == number3) {
+		
+		var number1 = Math.floor(Math.random() * (maxNum - minNum + 1)) + minNum;
+		var number2 = Math.floor(Math.random() * (maxNum - minNum + 1)) + minNum;
+		var number3 = Math.floor(Math.random() * (maxNum - minNum + 1)) + minNum;	
+		}
+		
+		randomNumbers.push(number1);
+		randomNumbers.push(number2);
+		randomNumbers.push(number3);
+		alert(randomNumbers);
+		
+	
+
+	
+		while(score < 17) {
+			
+			var guess = parseInt(prompt("Enter in your guess from" + minNum + " and " + MaxNum + "."));
+			
+			 if (guess == randomNumbers[i]){
+				 alert("You lost! You finished with " + score + " points.");
+				 
+		
+			 } else if (isNaN(guess)){ 
+				 alert("You did not enter in a number");
+				 
+			} else if (value >= minNum && value <= maxNum) {	
+			alert("Good Job, you survived another round.");
+			score++;
+			
+			} else {
+				alert("You did not enter in a number between 1 and 20.");
+				
+		
+	}
+		}
+	}
+	
+	</script>
+
+</head>
+
+</html>

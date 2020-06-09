@@ -1,0 +1,47 @@
+<!doctype html>
+
+<html lang ="en">
+
+<head>
+	<meta charset="utf-8"/>
+    <title>javascript 13 - Arrays and Input</title>
+    
+    <script>
+	
+	var fruit = [];
+	
+	var number = parseInt(prompt("Please enter a number"));
+	/* pasreInt() allows us to convert a variable or value into an integer. With this we can finally add two numbers together instead of concatenating (joining) them 
+	
+	when parseInt() is used and the returned value is NaN. it means Not a Number*/
+	
+	if (isNaN(number)) {
+		alert("You did not enter a valid number");
+	} else {	
+	
+	for (var y = 0; y < number; y++) {
+		/* . push() is a function specific to arrays
+		.push() will always add the value to the end of the array
+		
+		the following code will run x number of times, based on the number the user enters above.
+		therfore, if they type in the number 4, the following .push() command will prompt the user to enter 4 grocery items. 
+		
+		the parameter of  .push() can be a variable of a value
+		
+		fruit.push(4) //will always add the integer 4 to the end of the array
+		fruit("Yo")  //Will always add the string "yo" to the end of the array
+		fruit.push(y)  //will always add the current value of the variable y to the end of the array
+		
+		
+		*/
+		fruit.push(prompt("enter a grocery item"));
+		
+	}
+	
+	alert(fruit);
+	}
+	 </script>
+    
+    </head>
+    
+    

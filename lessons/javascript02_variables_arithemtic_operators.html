@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+	<eta charset="utf-8"/>
+    <title>Javascript 02 - Variables and Artmetic Operators</title>
+    <script>
+	
+	/*
+	There are four basic rules for naming variables:
+	1) use descriptive names without any spaces
+	2) you can not start a variable with a number
+	3) you can not start a variable with a keyword
+	4) you can not start a variable with an operator
+	
+	There are four basic types of variables:
+	1) integer (int): any positive or negative WHOLE numebr
+	2) floating point number (float): any positive or negative number with a decimal
+	3) boolean:a variable that can only be TRUE or FALSE
+	4) string: any 'sting' of characters, numbers, letters, or spaces 
+	
+	
+	*/
+	
+	var intNumber = 2;
+	var floNumber = 2.3;
+	var strVariable = "twenty three";
+	var yesno = true;
+	
+	/* 
+	
+	We have 5 basic arithmetic operators:
+	+ addition
+	- subtraction
+	* multiplication
+	/ division
+	% mod/module/modulous --> calculates the remainder of the division
+	
+	*/
+	
+	var x = 20;
+	var y = 3;
+	
+	alert(x + y); //answer:23
+	alert(x - y); //answer:17
+	alert(x * y); //answer:60
+	alert(x / y); //answer: 6.66666
+	alert(x % y); //answer:2 because 3 goes into 20 6 times (18), remainder 2
+	
+	//Let's use variables and arithmetic operators together
+	var apples = 7;
+	var pears = 3;
+	var totalFruit = apples + pears;
+	
+	//Remember to follow BEDMAS / order of operations
+	var totalFruit = apples + pears *10
+	alert(totalFruit) //answer: 37
+	
+	var first = "20"
+	var second = "19";
+	alert(first + second); //answer: 2019
+	/* When we add strings together, it joins them. This is called CONCATENATION */
+	
+	var name = "Bob";
+	var last  = "Smith";
+	alert(name + last); //answer BobSmith
+	alert("Hi! My name is " + name + " " + last "!Please to meet you.")
+	//answer: Hi! My name is Bob smith! Pleased to meet you.
+	
+	
+	
+	
+	</script>
+    </head>
+</head>
+<body>
+</body>
+</html>

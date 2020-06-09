@@ -1,0 +1,45 @@
+<!Doctype html>
+
+<html lang="en">
+
+<head>
+	<meta charset="utf-8"/>
+    <title>JavaScipt - Conditional Statement</title>
+    
+    <script>
+	
+	/* Condiontal Statements allow us to control the flow of our code. They specifically look for a particular consition, and if that condition is TRUE, it executes the action(s) that immediately follow. If the condition is FALSE, it ignores that particular code and moves on. 
+	*/
+	
+	var input = prompt("Do you like pizza? (y/n)");
+	
+	/* The following is a type of conditional statement called an if/else statement */
+	if (input =="y") {
+		/* When we are checking to see if a variable to equal to a value, we need two ='s. If we were to only put one equal sign. the code would think we are setting/initializing the variable to a new value.*/
+	alert("Pizza is my favourite too");
+	} else if (input == "n") {
+		alert(+
+		"How can you not like pizza? You must be crazy");
+	} else {
+		/*the else condition covers ALL other possible conditions that are not previously stated*/
+		alert("You did not enter a valid response");
+	}
+	
+	var input = prompt("Do you dipping sauces with your pizza (y/n)");
+	
+	if (input == "y") {
+		alert("then your pizza is sufficiently sauced");
+		
+	} else if (input == "n") {
+		alert("then your pizza is probably insufficiently sauced");
+	} else {
+		alert("It's a simple yes or no question that you got wrong");
+	}
+	
+	alert("You have answered all of my questions")
+	</script>
+    </head>
+    <body>
+    </body>
+    </html>
+	

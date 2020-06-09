@@ -1,0 +1,38 @@
+<!doctype html>
+
+<html lang="en">
+
+<head>
+	<meta charset="utf-8"/>
+    <title>Javascript 11 - Functions and Return</title>
+
+	<script>
+	getNum();
+	function rando(pNum) {
+		/*The purpose of this function will be to generate a random nymver */
+		var number = 3;
+		return(number);
+	}
+	
+	
+	function getNum() {
+	alert("getNum is being called");
+		/*The purpose of this function will be to prompt the user for a number*/
+		var number = prompt("Please enter a number");
+		var result = rando(number);
+		showNum(result);
+	}
+	
+	function showNum(pNum) {
+		/*the purpose of this function will be to show the number in a dunction write*/
+		document.write("<h2>You magic number is..." + pNum + "!</h2>");
+	}
+	
+
+	
+	</script>
+	
+	</head>
+	<body>
+	</body>
+	</html>

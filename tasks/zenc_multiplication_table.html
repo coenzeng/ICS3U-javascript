@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+	<meta charset="UTF-8" />
+    <title></title>
+    
+	<style>
+		
+		th, td {
+			height: 50px; /*Sets the size of all the cells to 50px*/
+			width: 50px;
+			}
+		th {
+			background-color: #bbbbbb; /*Sets background color of all table headers dark grey.*/
+			}
+		.square {
+			background-color: #ffaaaa; /*Sets background color of the all perfect squares pink.*/
+		}
+		
+		.even {
+			background-color: #eeeeee; /*Sets background color of all even numbers light grey.*/
+		}
+	</style>
+	
+	
+    <script>
+	
+		var x = prompt("Please enter your first number.");
+		var y = prompt ("Please enter your second number.");
+		var j = 0;
+		/*This code asks the user for 2 numbers which will be used as the x values and y values for the multiplication table, respectively. This information is stored in the variables 'x' and 'y' which will be accessed later.*/
+		while (isNaN(x * y)) {
+			alert("You did not enter in a valid number. Please try again.");
+			var x = prompt("Please enter your first number.");
+			var y = prompt ("Please enter your second number.");
+			
+			/*This while loop will check if the user inputted an invalid number (Not-a-Number). By checking for the product of x and y, it is able to check if both values are valid simultaneously. If both values ARE valid, then the while loop will be ignored. Additionally, if the user eventually decides to put in 2 valid numbers then the while loop won't be true anymore so the code will move on.*/
+		} 
+		document.write("<table border='1'> <tr>");
+		/*Set the border of the table to 1px and opened the first table row tag.*/
+		for(var i = 1; i <= y; i++) {
+			
+			/*This is the for loop that increases i by one until the max value for y is reached. This is essentially the first dimension of the mulitiplication table.*/
+								
+			if (j <= x){
+				for(var j = 0; j <= x; j++) {
+					document.write("<th>" + j + "</th>"); /*The code displays j, and the th tag bolds and centers the content.*/
+					
+					/*The j variable starts at zero (as set at the beginning of this code), increases by one each time, and then stops after reaching x. What this for statement does is show the first row of the multiplication table, which starts at zero. After j becomes bigger than the maximum x value, the if statement won't be true so the code will move on.*/
+				}
+			}
+			
+			document.write("</tr> <tr> <th>" + i + "</th>");
+			
+			/*The table row ends because the first one has been completed. A new table row starts but in the following code, table rows will just repeat because of the following for statement.
+			
+			The i variable is displayed after the j for statement is done with, because the top left corner must be a zero. If the i came before the j, then the first row would read "1, 0, 1, 2, 3, etc...".*/
+			
+				for(var n = 1; n <= x; n++) {
+						var answer = i * n;
+					
+						/*This for statement is the 'second dimension' of the multiplication table where the cells expand to the right horizontally. The variable n increases by one until it reaches the max x value set.
+						
+						The purpose of using n was so that it started at one and when multiplied by i would make the products of the multiplication table. If I used j then the first column would be multiplied by zero (because j started at zero). The answer is the product of the multiplication and is what is being shown in the table cells,*/
+					
+						if (i == n){
+							document.write("<td class='square'>" + answer + "</td>");	
+							
+							/*If i is equal to n then the answer will be perfect square. I created a class called 'square' and in the style section set the color to light pink. If i is not equal to n then this part of the if statement will not apply.*/		} else if (answer % 2 == 0){
+							document.write("<td class='even'>" + answer + "</td>")
+							/*If the answer is divided by 2 and the remainder is 0 then the answer is even. I made a class and in the style section set the background color to light grey. Also, the light background color will not override the perfect square background color (if the perfect square is even) because the perfect square background color came first in the if statement.*/
+						} else {
+						document.write("<td>" + answer + "</td>");
+					}
+
+				}
+			document.write("</tr>");
+		}
+		document.write("</table>");
+		document.write("<p>The highest number your multiplication table can make is " + x * y + ", which is " + x +" * " + y + ". This is also the number of cells in your multiplication table.</p>");
+	</script>
+
+</head>
+</html>

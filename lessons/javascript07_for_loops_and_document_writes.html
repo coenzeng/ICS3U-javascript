@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+
+<html lang="en">
+	<meta charset="utf-8"/>
+    <title>Javascript 07 - for Loops and Document Writes</title>
+    
+    <script>
+	
+	/* one way to create HTML elements from JavaScript is with document.write(). This will output a string to HTML directly, and, if we enter HTML lags, it will create those as well. We will eventually learn better ways to add HTML through JavaScript, but for now, this is a good start. */
+	
+	document.write("<h1>This is a Title generate in JavaScript</h1>");
+	
+	/* Remember: "while loops" repeat their instructions as long as a condition is true. They are the preferred loop choice when do not know how many times the loop needs to repeat. */
+	
+	/* For Loops are designed to repeat a set number of times. */
+	/* For loops have: a variable declaration, a condition, and a counter/incriment */
+	
+	for (var counter = 1; counter <= 10; counter++) {
+		
+		document.write("<p>This is loop " + counter + "</p>);
+	
+	}
+		
+	</script>
+</head>
+
+<body>
+</body>
+</html>
